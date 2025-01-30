@@ -85,7 +85,7 @@ contract Web3Builders is ERC721, ERC721Enumerable, Pausable, Ownable {
     function supportsInterface(bytes4 interfaceId)
         public
         view
-        override(ERC721, ERC721Enumerable)
+        (ERC721, ERC721Enumerable)
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
