@@ -18,7 +18,7 @@ contract Web3Builders is ERC721, ERC721Enumerable, Pausable, Ownable {
 
     Counters.Counter private _tokenIdCounter;
 
-    constructor() ERC721("Web3Builders", "WE3") {}
+    constructor() ERC721("KvngBuilders", "KNB") {}
 
     function _baseURI() internal pure override returns (string memory) {
         return "ipfs://QmSN6EEN7HvRRkiAygZK7ua121UVE69z9KJF6Ztmq7n3S9/";
@@ -78,7 +78,7 @@ contract Web3Builders is ERC721, ERC721Enumerable, Pausable, Ownable {
         address to,
         uint256 firstTokenId,
         uint256 batchSize
-    ) internal virtual override(ERC721, ERC721Enumerable) {
+    ) internal virtual override (ERC721, ERC721Enumerable) {
         return super._beforeTokenTransfer(from, to, firstTokenId, batchSize);
     }  
 
